@@ -1,0 +1,80 @@
+
+Code Style Specification: HTML, JavaScript, CSS, Java
+
+    The overriding principles are:
+    The code must be properly credited,
+    The code must be elegant,
+    The code must be readable. 
+
+Further specifications are given here for those who are uncertain as to the meaning of the above overriding principles.
+The code must be properly credited
+
+    The header of each file includes name, course number, semester, project number, a title or brief description.
+    Any code that has been cannabilized must be credited to its originator, unless that code appears in the
+    currently used textbook, was supplied by the instructor, or the instructor explicitly said you didn't have
+    to credit the source. 
+
+The code must be elegant
+
+    There are no unnecessary variables nor unnecessary executable statements.
+    Unless there are performance issues, code should be organized into functions that are reasonable and logical.
+    Each function should fit on at most one page (approximately 30 lines of code).
+    Unless there are performance issues, use global variables only to minimize parameter passing and to make clean functions.
+    Always use standard algorithms when possible.
+    Don't put code inside loops or inside recursive functions unless absolutely necessary. 
+
+The code must be readable
+
+    Unless there are other factors (such as performance or specification requirements), use the most readable algorithm.
+    Be consistent in all your style.
+    Use good naming practice
+        Variables with small scope should have short names, those with larger scope have longer names.
+        Names are descriptive (except for loop control).
+        Use case properly: variables start with lower case, constants are all upper case. 
+    Variables (except loop control) are declared in a function before any executable statements.
+    Keep your exit points few and logical. Avoid break and continue unless the code is improved by using them.
+    Use comments to help the reader
+        Comment as though you are explaining your code to a person fluent in the implementation language.
+        If a comment is on the same line as code, it should be to the right and aligned.
+        Comment logical blocks of code
+        When your code is deeply nested, include a right comment on closing brace with the control structure.
+
+                 int main () {
+                    for (int i = 0; i < n; i++ ) {
+                       for (int j = 0; j < n; j++ {
+                          if ( i < j ) {
+                            do something;
+                            }                        
+                          else {
+                             do something;
+                             }                          // else
+                          do something;
+                          }                             // for j
+                       do something;
+                       }                                // for i
+                    }                                   // main
+                   
+
+    Whitespace -- above all, be consistent.
+        A blank line separates blocks
+        Align according to nesting level. Use reasonable size for tab. For HTML and Javascript, use a fairly small
+        tab of 2 or 3 spaces. For Java, you can use a tab of 4 spaces.
+        Be consistent in your usage of braces. My personal preference for function headers, loop control, if, and switch,
+        is to place the left brace at the end of the line preceding the block. The terminating brace goes on a separate
+        line at the end of the block aligned with the statements in the block.
+
+                 int main () {
+                    cout << "Hello world!";
+                    }                                   // main
+                 
+
+        However, the overriding principle for use of whitespace is be consistent .
+        Surround binary arithmetic, logical or assignment operators with a single blank.
+        Specifics for aligning HTML
+            A closing tag either goes on the same line as its corresponding opening tag, or it goes on a separate line.
+            Align table cell data to mimic the layout on the displayed page.
+            Closing tags on separate line are aligned with the corresponding openiing tag. Avoid putting multiple
+            closing tags on the same line unless it really improves readability.
+            Properly nest closing tags with opening tags.
+            < html > , < head > and < body > can be left justified (on column 0). 
+
