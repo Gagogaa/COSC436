@@ -1,3 +1,43 @@
+/**
+ * Gregory Mann
+ * people.emich.edu/gmann1
+ * COSC 436
+ * Assignment 01/05
+ * WINTER 2017
+ * CSS page for Assignment 01/05
+ * This project searches and replaces strings of text within a text area.
+ * It loads a specified UTF-8 file from the users machine to do the searching. 
+ */
+
 * {
-	font-size: 1.1em;
+
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #fdf6e3;
+}
+
+#textArea, #textArea:focus {
+	width: 85%;
+	margin: 1em;
+	border: none;
+	resize: none;
+	font-size: 1.3em;
+	background-color:	 #eee8d5;
+	outline: none; 								/* fix for chrome highlights */
+	box-shadow: 0px 15px 40px -10px rgba(0,0,0,0.2);
+}
+
+#search-replace-box {
+	margin: 1.5em;
+	padding: 0.5em;
+	background-color:	 #eee8d5;
+	box-shadow: 0px 15px 40px -10px rgba(0,0,0,0.5);
+}
+
+#search-replace-box * {
+	margin: 0.3em;
 }
