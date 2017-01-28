@@ -1,0 +1,53 @@
+<!--
+		x load a text file (file chosen by user, file is on local machine)
+		x display the contents of the text file
+
+		x have a place where user can enter search string
+		x have a place where user can enter replacement string
+
+		x have a button where user can request scan for next occurrence of search string
+		x have a button that causes replacement of search string with replacement string.
+
+		- the functionality of saving the changed text file is OPTIONAL (extra credit),
+		but if you implement this, there must be a "save" button
+	-->
+
+<!--
+		Gregory Mann
+		people.emich.edu/gmann1
+		COSC 436
+		Assignment 01/05
+		WINTER 2017
+		This project searches and replaces strings of text within a text area.
+		It loads a specified UTF-8 file from the users machine to do the searching.
+	-->
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Project 1</title>
+		<script src="app.js"></script>
+		<link href="style.css" rel="stylesheet"/>
+	</head>
+	<body onload="init();">
+
+		<textarea rows="30" id="textArea" spellcheck="false" readonly></textarea>
+
+		<div id="search-replace-box">
+			<input id="fileInput" type="file" onchange="search_replace.readFile();"/>
+
+			<div class="text-buttons">
+				<input id="searchParam" type="text"/>
+				<button onclick="search_replace.search();">search</button>
+			</div>
+
+			<div class="text-buttons">
+				<input id="replaceParam" type="text"/>
+				<button onclick="search_replace.replace();">replace</button>
+			</div>
+
+		</div>
+
+	</body>
+</html>

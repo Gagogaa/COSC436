@@ -1,0 +1,47 @@
+COSC 540/346  Program 01/05  Client Side Scan and Replace
+
+Distributed 1/5/2017
+Due: 1/12/2017
+
+Create a web page that allows scan and replace of text from a file. Use HTML, CSS 
+and Javascript.
+
+This webpage needs to:
+  - load a text file (file chosen by user, file is on local machine)
+  - display the contents of the text file
+  - have a place where user can enter search string
+  - have a place where user can enter replacement string
+  - have a button where user can request scan for next occurrence of search string
+  - have a button that causes replacement of search string with replacement string.
+  - the functionality of saving the changed text file is OPTIONAL (extra credit),
+  but if you implement this, there must be a "save" button.
+  
+When the program locates the next occurrence of the search string, it must be
+highlighted or somehow marked on display of the text file.
+
+Constraints:
+- You must make use of String and RegExp methods.
+- The page must look good -- no misspellings, no bad alignments, no jumpy positioning, ...
+- CSS and Javascript can be in external files or internal (or inline).
+
+If you cannabilize code from the web, you MUST cite the source in the header of 
+the HTML file and the header of external files (if any).
+
+Code must include a header with 
+    [your name]
+    [your URL]
+    COSC 436 or 540
+    Assignment 01/05
+    WINTER 2017
+
+Turn in:
+Hard copy of source code.
+Hard copy of screen shot.
+
+Evaluations of two other student projects.
+
+Code demo and walk-thru to Prof Haynes (5 minutes per assignment)
+
+Your code must adhere to good Coding Standards (see course website) 
+ 
+

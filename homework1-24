@@ -1,0 +1,69 @@
+Gregory Mann
+E01457245
+Assignment 1-24
+
+1) https://www.amazon.com/?_encoding=UTF8&camp=1789&creative=390957&linkCode=ur2&tag=lethalfrag-20
+
+	 scheme: https://
+	 host: www.amazon.com/
+	 query: ?_encoding=UTF8&camp=1789&creative=390957&linkCode=ur2&tag=lethalfrag-20
+
+	 The tag= contains the name of the affiliate.
+	 The "tags" in the URL seem to be separated by &.
+
+2) The machines in 520 can open an sftp connection provided you use an application that
+	 supports sftp, such as filezilla or the sftp command line application.
+
+3) https://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=haskell
+
+	 scheme: https://
+	 host: www.amazon.com/
+	 path: s/ref=nb_sb_noss_2
+	 query: url=search-alias%3Daps&field-keywords=haskell
+
+4) emich.edu/calendar "final exam" status
+
+	 200 OK
+
+5) https://www.google.com/?gws_rd=ssl#q=%22queen+elizabeth%22
+
+	 scheme: https://
+	 host: www.google.com/
+	 query: ?gws_rd=ssl
+	 frag: #q=%22queen+elizabeth%22
+
+	 http://www.bing.com/search?q=%22queen+elizabeth%22&qs=n&form=QBLH&sp=-1&pq=%22queen+elizabeth%22&sc=10-17&sk=&cvid=A1F29689BABC4207A13E2EF6C7DAD554
+
+	 scheme: http://
+	 host: bing.com/
+	 path: search
+	 query: ?q=%22queen+elizabeth%22&qs=n&form=QBLH&sp=-1&pq=%22queen+elizabeth%22&sc=10-17&sk=&cvid=A1F29689BABC4207A13E2EF6C7DAD554
+
+	 I think that some of the differences are in the technologies powering the search.
+	 Google may be using GO, and Microsoft might be using php or its own in house technology.
+	 
+6) Google search for Gir
+
+	 The most time consuming part of the response by far was the initial message from Google. It took 934ms to receive the response.
+	 742ms of that time was spent receiving the document.
+
+	 The next time consuming response was a GET request for some images that took 98ms.
+
+7) No, I cannot see the php source code.
+
+8) Simple web page analysis
+
+	 HEADERS:
+		1. In a request the user sends an AGENT string so when a login page tells you that your xyz is out of date
+			 part of that comes from AGENT string. It's also how download pages know what operating system your running.
+		2. The request header also contains cookies. I think this is one of the reasons why sessions use cookies.
+
+	 RESPONSE:
+		1. Web pages can be broken down into many files that the USER/CLIENT can easily parse for information.
+		2. After the initial page load subsequent requests (for images and things) don't need to establish a
+			 new connection. This can be seen by the DNS resolution time and connection time in the html response.
+			 The subsequent request for the image has no DNS resolution time and no connection time.
+
+	 TIMING:
+		1. Most of the browsers time is spent waiting for a response.
+		2. Images (due to size) take longer to retrieve from the server.
