@@ -1,0 +1,107 @@
+<!--
+The store's data is placed in an array. Each record in the array has
+fields for ID, ITEM, COST.
+
+Version 1. (Client-Only using Javascript)
+Enter the data to an HTML form. Sum up the total cost using Javascript.
+Display a list of ordered items and the total cost.
+
+
+The items are displayed as follows:
+
+ID  Item    Cost per item   Quantity ordered
+20  Pen     2               _____
+55  Pencil  1               _____
+n57  Paper   30              _____
+60  Stapler 50              _____
+
+When you display the order form and when you display the invoice, you must be
+stepping through an array.  You should put the number of items ordered in a second
+array.
+
+-->
+
+<!doctype html>
+<html lang="en">
+
+	<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <script>
+     function data(id, item, cost) {
+       this.id = id;
+       this.item = item;
+       this.cost = cost;
+     }
+
+     var dataSet = [];
+     dataSet[0] = new data(20, "Pen", 2);
+     dataSet[1] = new data(55, "Pencil", 1);
+     dataSet[2] = new data(57, "Paper", 30);
+     dataSet[3] = new data(60, "Stapler", 50);
+
+     function order() {
+       var inputs = document.querySelectorAll("input");
+       var numOfItems = [];
+       var invoice = "<table><tr><td>Item</td><td>Quantity</td><td>Total Cost</td>";
+
+       // put number of items into an array
+       for (var i = 0; i < inputs.length; i++) {
+         numOfItems[i] = inputs[i].value;
+       }
+
+       // construct <tr> elements for the table consisting of
+       // the item name, number ordered, and cost of items combined
+       // if the number of items is greater than zero
+       for (var i = 0; i < inputs.length; i++) {
+         if (numOfItems[i] == 0) {
+
+         } else {
+           invoice += '<tr><td>' + inputs[i].name +
+                      '</td><td>' + numOfItems[i] +
+                      '</td><td>' + (numOfItems[i] * dataSet[i].cost) +
+                      '</td></tr>';
+         }
+       }
+
+       // calculate the total cost of the items
+       var total = function() {
+         var total = 0;
+         for (var i = 0; i < inputs.length; i++) {
+           total += (numOfItems[i] * dataSet[i].cost);
+         }
+         return total;
+       }();
+
+       invoice += "</table><p>Total Order Cost: " + total + "</p>";
+       document.querySelector("body").innerHTML = invoice;
+     }
+
+     function init() {
+       var table = document.querySelector("table");
+       // initialize the table "header"
+       var innerHtmlForTable = '<tr><td>ID</td><td>Item</td><td>Cost per item</td><td>Quantity Ordered</td></tr>';
+
+       // construct the <tr> elements for the table based on the dataSet
+       for (var i = 0; i < dataSet.length; i++) {
+         innerHtmlForTable += '<tr>' + '<td>' + dataSet[i].id + '</td>' +
+															'<td>' + dataSet[i].item + '</td>' +
+															'<td>' + dataSet[i].cost + '</td>' +
+															'<td><input name="' + dataSet[i].item +
+															'" id="' + dataSet[i].id +
+															'" type="number" value="0"/></label></td></tr>';
+       }
+       table.innerHTML = innerHtmlForTable;
+     }
+    </script>
+	</head>
+
+	<body onload="init();">
+    <form method="POST">
+      <table>
+      </table>
+      <button type="button" onclick="order();">Calculate order</button>
+    </form>
+	</body>
+
+</html>
