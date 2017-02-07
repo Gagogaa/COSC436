@@ -1,25 +1,7 @@
 <!--
-The store's data is placed in an array. Each record in the array has
-fields for ID, ITEM, COST.
-
-Version 1. (Client-Only using Javascript)
-Enter the data to an HTML form. Sum up the total cost using Javascript.
-Display a list of ordered items and the total cost.
-
-
-The items are displayed as follows:
-
-ID  Item    Cost per item   Quantity ordered
-20  Pen     2               _____
-55  Pencil  1               _____
-n57  Paper   30              _____
-60  Stapler 50              _____
-
-When you display the order form and when you display the invoice, you must be
-stepping through an array.  You should put the number of items ordered in a second
-array.
-
--->
+		 Gregory Mann
+		 Homework 01-26
+	 -->
 
 <!doctype html>
 <html lang="en">
@@ -28,18 +10,22 @@ array.
     <meta charset="UTF-8" />
     <title>Document</title>
     <script>
+
+		 /* create data template */
      function data(id, item, cost) {
        this.id = id;
        this.item = item;
        this.cost = cost;
      }
 
+		 /* add data to the set */
      var dataSet = [];
      dataSet[0] = new data(20, "Pen", 2);
      dataSet[1] = new data(55, "Pencil", 1);
      dataSet[2] = new data(57, "Paper", 30);
      dataSet[3] = new data(60, "Stapler", 50);
 
+		 /* the user hits the calculate button */
      function order() {
        var inputs = document.querySelectorAll("input");
        var numOfItems = [];
@@ -79,7 +65,6 @@ array.
 
      function init() {
        var table = document.querySelector("table");
-       // initialize the table "header"
        var innerHtmlForTable = '<tr><td>ID</td><td>Item</td><td>Cost per item</td><td>Quantity Ordered</td></tr>';
 
        // construct the <tr> elements for the table based on the dataSet
