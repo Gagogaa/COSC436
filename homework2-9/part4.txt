@@ -1,0 +1,7 @@
+Gregory Mann
+gmann1
+E01457245
+02/09
+URL: http://people.emich.edu/gmann1/COSC436/homework2-9/part4.txt
+
+array_rand() is choose_without_replacement
